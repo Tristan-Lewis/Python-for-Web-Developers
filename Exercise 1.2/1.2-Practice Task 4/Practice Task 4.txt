@@ -1,0 +1,5 @@
+str3[3:] would return: lo, how are you?
+str3[-3:] would return: ou?
+str3[2:9:3] would return: l,o
+str3[::-2] would return: uyeawh,le
+str3[2:8] would return: llo, h
