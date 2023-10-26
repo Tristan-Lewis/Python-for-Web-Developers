@@ -15,14 +15,14 @@ def take_recipe(iteration):
 
     for number in range(number_of_ingredients):
 # step 5
-        ingredient = (input(" What is ingredient " + str(number + 1) + "?\n"))
+        ingredient = (input("What is ingredient " + str(number + 1) + "?\n"))
         if ingredient not in ingredients_list:
             ingredients_list.append(ingredient)
 
     recipe = {'name': name, 'cooking_time': cooking_time, 'ingredients': ingredients_list}
 
     recipes_list.append(recipe)
-
+# Step 6 pt1
     for recipe in recipes_list:
         if cooking_time < 10 and len(ingredients_list) < 4:
             recipe['difficulty']='Easy'
@@ -41,11 +41,12 @@ n = int(input("How many recipes would you like to add?\n"))
 
 for number in range(n):
     take_recipe(number)
-# Step 6
+#Step 6 pt2
 for recipe in recipes_list:
-    print("Recipe: " + recipe["name\n"] + "Cooking Time (min): " + recipe["cooking_time\n"] + "Ingredients:\n" + recipe["ingredients_list"][0] + recipe["ingredients_list"][1] + "Difficulty Level: " + recipe["difficulty"])
+    print("Recipe: " + recipe['name'])
+    print("Cooking Time: " + str(recipe['cooking_time']))
+    print("Ingredients:")
+    for i in ingredients_list:
+        print(i)
 # Step 7    
 ingredients_list.sort()
-
-for ingredients in ingredients_list:
-    print(ingredients)
